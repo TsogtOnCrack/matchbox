@@ -10,6 +10,12 @@ export const Typography = ({ type, children, className }: any) => {
 
             case "BigRed":
                 return "text-[#C6432F] font-montserratExtraBold text-[50px] uppercase"
+            case "MidRed":
+                return "text-[#C6432F] font-montserratExtraBold text-[30px] uppercase"
+    
+            case "UltraBigRed":
+                return "text-[#C6432F] font-montserratExtraBold text-[90px] uppercase"
+
             case "MainMed":
                 return "font-robotoMedium text-[24px]"
             case "MainReg":
