@@ -5,7 +5,7 @@ export const Projects = () =>{
 
 
     return <MainLayout>
-        <div className="w-screen flex justify-center">
+        <div className="w-screen flex justify-center h-[400px] items-center">
             <Typography type = "BigRed">Coming soon...</Typography>
         </div>
 

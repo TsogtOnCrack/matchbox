@@ -16,7 +16,7 @@ export const Header = ({buffer = false}: any) => {
 
     return <div>
         
-        <div className={` fixed z-50 w-screen h-[125px] bg-white/75 drop-shadow-lg flex justify-center items-center px-[10px]`}>
+        <div className={` fixed z-50 w-screen h-[90px] bg-white/75 drop-shadow-lg flex justify-center items-center px-[10px]`}>
 
 
 

@@ -7,8 +7,6 @@ export const Submit = () =>{
     return <div>
         
         <GalleryHeader/>
-
-    <div className=" h-[200px]"></div>
         <SubmitBody/>
 
 

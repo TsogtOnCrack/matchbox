@@ -18,19 +18,24 @@ export const GalleryBody = () => {
         height: "100%"
     }
 
-    return <div className="flex h-screen justify-center max-w-[1800px] overflow-clip">
+    return <div className="flex h-screen justify-center max-w-[1800px]">
 
+
+        {/* bottom layer */}
         <div className=" w-[60vw] flex justify-between">
             <div className=" h-screen"><Image style={hmm} alt="Right side of curtain 1" src={right1}></Image> </div>
             <div className=" h-screen"><Image style={hmm} alt="left side of curtain 1" src={left1}></Image></div>
         </div>
 
-        <div className="w-[99vw] h-screen z-20 absolute flex justify-between items-center max-w-[1800px]">
+
+        {/* 2nd layer */}
+        <div className="w-[100vw] h-screen z-20 absolute flex justify-between items-center max-w-[1800px]">
             <div className=" h-screen"><Image style={hmm} alt="Right side of curtain 2" src={right2}></Image></div>
             <Image style={{ width: "30vw", height: "15vw", maxWidth: "700px", maxHeight: "350px" }} src={banner} alt="A hand drawn banner saying comming soon"></Image>
             <div className="h-screen"><Image style={hmm} alt="left side of curtain 2" src={left2}></Image></div>
         </div>
 
+        {/* top layer  */}
         <div className=" h-screen w-[75vw] flex justify-between absolute z-30 items-center">
             <div className=" w-[230px] h-[260px] mb-6"> <Link href="/"><Image style={hmm} alt="Right side of curtain 2" src={back}></Image></Link></div>
             <div className=" w-[220px] h-[260px] mt-28"><Link href = "/submit"><Image style={hmm} alt="Right side of curtain 2" src={submit}></Image></Link></div>

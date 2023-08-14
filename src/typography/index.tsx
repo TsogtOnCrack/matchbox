@@ -18,6 +18,8 @@ export const Typography = ({ type, children, className }: any) => {
 
             case "MainMed":
                 return "font-robotoMedium text-[24px]"
+            case "MainMedRed":
+                return "font-robotoMedium text-[24px] text-[#C6432F]"
             case "MainReg":
                 return "font-robotoRegular text-[24px]"
             case "SubBlack":
