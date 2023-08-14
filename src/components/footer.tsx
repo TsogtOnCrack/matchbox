@@ -14,23 +14,19 @@ const contactInfo = {
         95531160,
         95531160,
     ]
-
-
-
 }
 
-
 const imageStyle = {
-    width: "100vw",
+    width: "99vw",
     maxWidth: "1800px",
 }
 
 export const Footer = () => {
 
-    return <div className="w-screen flex flex-col items-center  ">
+    return <div className=" max-w-screen flex flex-col items-center">
 
-        <Image src={skyline} style={imageStyle} alt="UB's skiline in the eyes of our artist" />
-        <div className=" text-white bottom-0 h-[180px] w-full bg-[#110D0B] flex justify-center px-14 items-center">
+        <div className="max-w-screen"><Image src={skyline} style={imageStyle} alt="UB's skiline in the eyes of our artist" /></div>
+        <div className=" text-white bottom-0 h-[180px] w-full bg-[#110D0B] flex justify-center items-center">
 
             <div className="w-[330px] flex flex-col">
                 <div className="flex flex-row mb-5">

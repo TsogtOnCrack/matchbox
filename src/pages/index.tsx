@@ -1,8 +1,19 @@
 import { MainLayout } from "../layout/mainLayout"
-export const App = () =>{
+
+import { WhoAreWeTop } from "@/components/WhoAreWeTop"
+import { OurGoal } from "@/components/OurGoal"
+import { MeetTheTeam } from "@/components/MeetTheTeam"
+
+export const App = () => {
 
     return <MainLayout>
-        <div className="h-[300vh]">sheeee</div>
+
+        <WhoAreWeTop/>
+        <OurGoal/>
+
+        <MeetTheTeam/>
+
+
     </MainLayout>
 }
 
