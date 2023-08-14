@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
-
+import Image from "next/image"
 import { Typography } from "@/typography"
+
+import whimp from "../assets/decor/whimpykid.png"
+
 
 const animation = {
 
@@ -16,8 +19,11 @@ const data = {
 
 export const BriefIntro = () => {
 
-    return <motion.div variants={ animation} initial = "hidden" whileInView="visible" transition = {{duration: "0.5"}} className="w-full max-w-screen flex flex-row justify-center items-center my-24">
-
+    return <div >
+        <div className="absolute -z-50 right-5">
+            <Image src = {whimp} alt = "some child"></Image>
+        </div>
+     <motion.div variants={ animation} initial = "hidden" whileInView="visible" transition = {{duration: "0.5"}} className="w-full max-w-screen flex flex-row justify-center items-center my-24">
         <div className="flex flex-col w-[50vw]">
 
             <Typography type="BigRed">{data.header}</Typography>
@@ -25,4 +31,5 @@ export const BriefIntro = () => {
 
         </div>
     </motion.div>
+    </div>
 }

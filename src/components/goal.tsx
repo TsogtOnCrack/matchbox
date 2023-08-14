@@ -5,6 +5,20 @@ import Image from "next/image"
 
 import { motion } from "framer-motion"
 
+
+import child from "../assets/decor/child.png"
+import rainbow from "../assets/decor/rainbow.png"
+import dino from "../assets/decor/dino.png"
+import rubik from "../assets/decor/rubiksCube.png"
+import girl from "../assets/decor/girl.png"
+
+
+const DecorList = [
+    child, rainbow, dino, rubik, girl
+]
+
+
+
 const textl = {
 
     hidden:{
@@ -30,7 +44,7 @@ const textr = {
     }
 }
 
-export const Goal = ({ Header, Body, left = false }: any) => {
+export const Goal = ({ Header, Body, left = false, index }: any) => {
 
     return <div  className={`flex flex-col px-20 h-[500px] justify-center w-[95vw] max-w-screen ${left ? " items-end" :" items-start"}  `}>
 
@@ -48,6 +62,10 @@ export const Goal = ({ Header, Body, left = false }: any) => {
         </motion.div>
 
         <div className={`${left ? "" : "absolute h-[500px] w-[85vw] left-0 bg-[#3163AC]/5 "} `}></div>
+        <div className={`${left ? "left-12" : "right-12" } absolute -z-20`}>
+
+            <Image src = {DecorList[index]} alt ="hand drawn image"></Image>
+        </div>
 
 
     </div>

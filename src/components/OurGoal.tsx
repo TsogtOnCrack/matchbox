@@ -1,6 +1,10 @@
 import { Typography } from "@/typography/index"
 import { Goal } from "./goal"
 
+import Image from "next/image"
+
+
+
 
 const data = {
     goals:[
@@ -18,11 +22,18 @@ const data = {
 export const OurGoal = () => {
 
     return <div className="flex flex-col items-center mt-24 ">
+
+
+
+        {/* <div className="absolute z-50 right-0">
+            <Image src = {child} alt = "hand drawn picture of a child"/>
+        </div> */}
+
         <Typography className = " w-[1025px] my-10" type = "BigRed"> our goal</Typography>
     {/* <Typography type = "SubBlack"> Make sure children know their rights.</Typography> */}
     {
         data.goals.map((el, i)=>{
-            return <Goal Header = {el.Header} Body = {el.Body} left = {i % 2 == 0 ? false : true}/>
+            return <Goal Header = {el.Header} Body = {el.Body} index = {i} left = {i % 2 == 0 ? false : true}/>
         })
     }
     </div>

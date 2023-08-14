@@ -3,6 +3,10 @@ import { Typography } from "@/typography"
 
 import { motion } from "framer-motion"
 
+import Image from "next/image"
+import pencil from "../assets/decor/pencils.png"
+import girl2 from "../assets/decor/girl2.png"
+
 
 const container = {
     visible: {
@@ -23,6 +27,9 @@ const Iteme = {
 export const Article = ({ List, Title }: any) => {
 
     return <div className="w-full max-w-screen flex flex-col items-center mt-60">
+        
+        <div className= {`${Title == "Article 4. The Fundamental Principles of Children’s Rights" ? "absolute w-screen -z-50 -mt-[100px]" :"hidden" }`}> <Image src= {pencil} alt = "crayons"></Image></div>
+        <div className= {`${Title == "Article. 6 Children’s right to development" ? "absolute left-5 -z-50 -mt-[200px] " :"hidden" }`}> <Image src= {girl2} alt = "girl drawn with crayons"></Image></div>
 
         <Typography type="BigRed" className="w-[800px] text-center">{Title}</Typography>
 
