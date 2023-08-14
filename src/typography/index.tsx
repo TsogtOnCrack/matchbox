@@ -1,9 +1,6 @@
 export const Typography = ({ type, children, className }: any) => {
 
 
-    console.log(type)
-
-
     const getStyle = (t: String) => {
 
         switch (t) {

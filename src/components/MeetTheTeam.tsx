@@ -1,6 +1,8 @@
 import { Typography } from "@/typography/index"
 import Image from "next/image"
 
+import { motion } from "framer-motion"
+
 import misheel from "../assets/misheel.png"
 import tsogt from "../assets/tsogt.png"
 import nara from "../assets/nara.png"
@@ -14,6 +16,19 @@ const team = [
     { title: "co-founder", image: nara },
 ]
 
+
+const animation = {
+
+    hidden: {
+        y: "200px"
+
+    },
+    visible: {
+        y: "0",
+    },
+
+}
+
 export const MeetTheTeam = () => {
 
     return <div className="flex flex-col items-center">
@@ -21,21 +36,21 @@ export const MeetTheTeam = () => {
         <Typography className="my-10 w-[1025px]" type="BigRed">meet the the team</Typography>
 
         <div className="flex flex-row items-center max-w-screen justify-center h-[500px] ">
-            <div className="flex flex-row items-end max-w-[1025px] w-[85vw] justify-between">
+            <motion.div variants={animation} initial= "hidden" whileInView={"visible"}  transition= { {duration:"0.4"} } className="flex flex-row items-end max-w-[1025px] w-[65vw] justify-between">
                 {
                     team.map((el) => {
 
                         return <div className="flex flex-col items-center ">
 
-                            <Image src={el.image} width={180} alt="image of person" />
-
+                            <Image src={el.image} width={160} alt="image of person" />
                             <Typography type="TitleBlack" > {el.title}</Typography>
+
                         </div>
                     })
 
                 }
-            </div>
-            <div className="h-[500px] w-[80vw] absolute right-0 bg-[#3163AC]/5"></div>
+            </motion.div>
+            <div className="h-[500px] w-[90vw] absolute right-0 bg-[#3163AC]/5"></div>
 
         </div>
 

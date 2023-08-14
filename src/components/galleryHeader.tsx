@@ -15,7 +15,7 @@ export const GalleryHeader = () => {
     }
 
 
-    return <div className="flex justify-center items-center flex-col fixed z-40 max-w-[1800px]">
+    return <div className="flex w-screen justify-center items-center flex-col fixed z-40 max-w-[1800px]">
 
         <Image
             alt="header pic"
