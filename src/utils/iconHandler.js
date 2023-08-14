@@ -180,6 +180,6 @@ export const handleIcon = ({ icon, size = 24, className = '' }) => {
             }
             />
         default:
-            return < > < />
+            return <></>
     }
 }
